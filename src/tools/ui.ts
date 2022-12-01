@@ -13,7 +13,6 @@ export const basicDimensions = {
 const {height, width} = Dimensions.get('window');
 
 /**
- *
  * @param num 디바이스의 세로 비율에 따라 변환되는 값
  * @returns
  */
@@ -22,7 +21,6 @@ export const hp = (num: number) => {
 }; // 높이 변환 작업
 
 /**
- *
  * @param num 디바이스의 세로 비율에 따라 변환되는 값
  * @returns
  */
