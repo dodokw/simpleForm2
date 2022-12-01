@@ -7,7 +7,6 @@
  */
 
 import React from 'react';
-import type {Node} from 'react';
 import {
   SafeAreaView,
   ScrollView,
@@ -16,6 +15,8 @@ import {
   Text,
   useColorScheme,
   View,
+  TextInput,
+  LogBox
 } from 'react-native';
 
 import {
@@ -28,6 +29,31 @@ import {
 
 
 const App = () => {
+
+
+  //텍스트 고정 시작
+  interface TextWithDefaultProps extends Text {
+    defaultProps?: {allowFontScaling?: boolean};
+  }
+  
+  interface TextInputWithDefaultProps extends TextInput {
+    defaultProps?: {allowFontScaling?: boolean};
+  }
+  
+  (Text as unknown as TextWithDefaultProps).defaultProps =
+    (Text as unknown as TextWithDefaultProps).defaultProps || {};
+  (Text as unknown as TextWithDefaultProps).defaultProps!.allowFontScaling =
+    false;
+  (TextInput as unknown as TextInputWithDefaultProps).defaultProps =
+    (TextInput as unknown as TextInputWithDefaultProps).defaultProps || {};
+  (
+    TextInput as unknown as TextInputWithDefaultProps
+  ).defaultProps!.allowFontScaling = false;
+
+  //텍스트 고정 끝
+  
+  LogBox.ignoreLogs(['Expected style']);
+  
 
 
   return (
