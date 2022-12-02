@@ -5,30 +5,35 @@ import SecondNavigation from './SecondNavigation';
 import ThirdNavigation from './ThirdNavigation';
 import FourthNavigation from './FourthNavigation';
 import {NavigationContainer} from '@react-navigation/native';
+import {
+  AllscreenList,
+  BottomTabNameList,
+  RootStackParamList,
+} from './NavigationProps';
 
 const BottomNavigation = () => {
-  const BottomStack = createBottomTabNavigator<any>();
+  const BottomStack = createBottomTabNavigator<RootStackParamList>();
 
   return (
     <NavigationContainer>
       <BottomStack.Navigator>
         <BottomStack.Screen
-          name="First"
+          name={BottomTabNameList.first}
           component={FirstNavigation}
           options={{headerShown: false}}
         />
         <BottomStack.Screen
-          name="Second"
+          name={BottomTabNameList.second}
           component={SecondNavigation}
           options={{headerShown: false}}
         />
         <BottomStack.Screen
-          name="Third"
+          name={BottomTabNameList.third}
           component={ThirdNavigation}
           options={{headerShown: false}}
         />
         <BottomStack.Screen
-          name="Fourth"
+          name={BottomTabNameList.fourth}
           component={FourthNavigation}
           options={{headerShown: false}}
         />

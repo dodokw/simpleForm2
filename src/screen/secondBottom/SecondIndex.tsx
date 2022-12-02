@@ -1,8 +1,12 @@
 import React from 'react';
 import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 import styled from 'styled-components/native';
+import {
+  AllscreenList,
+  SecondBottomStackProps,
+} from '../../navigation/NavigationProps';
 
-const SecondIndex = () => {
+const SecondIndex = ({}: SecondBottomStackProps<AllscreenList.SecondIndex>) => {
   return (
     <Container>
       <CustomText>SecondBottom</CustomText>

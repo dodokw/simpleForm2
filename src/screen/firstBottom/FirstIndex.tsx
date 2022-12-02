@@ -1,8 +1,12 @@
 import React from 'react';
 import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 import styled from 'styled-components/native';
+import {
+  AllscreenList,
+  FirstBottomStackProps,
+} from '../../navigation/NavigationProps';
 
-const FirstIndex = () => {
+const FirstIndex = ({}: FirstBottomStackProps<AllscreenList.FirstIndex>) => {
   return (
     <Container>
       <CustomText>fistBottom</CustomText>

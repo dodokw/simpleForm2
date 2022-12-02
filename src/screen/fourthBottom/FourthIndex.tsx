@@ -1,8 +1,12 @@
 import React from 'react';
 import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 import styled from 'styled-components/native';
+import {
+  AllscreenList,
+  FourthBottomStackProps,
+} from '../../navigation/NavigationProps';
 
-const FourthIndex = () => {
+const FourthIndex = ({}: FourthBottomStackProps<AllscreenList.FourthIndex>) => {
   return (
     <Container>
       <CustomText>FourthBottom</CustomText>
