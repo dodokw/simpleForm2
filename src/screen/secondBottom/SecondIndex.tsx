@@ -5,6 +5,7 @@ import {
   AllscreenList,
   SecondBottomStackProps,
 } from '../../navigation/NavigationProps';
+import {CustomText} from '../../tools/CustomText';
 
 const SecondIndex = ({}: SecondBottomStackProps<AllscreenList.SecondIndex>) => {
   return (
@@ -19,12 +20,6 @@ const Container = styled.View`
   background-color: #fff;
   align-items: center;
   justify-content: center;
-`;
-
-const CustomText = styled.Text`
-  font-size: 20px;
-  font-weight: bold;
-  color: #000;
 `;
 
 export default SecondIndex;

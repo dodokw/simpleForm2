@@ -7,26 +7,7 @@
  */
 
 import React from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-  TextInput,
-  LogBox,
-} from 'react-native';
-
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-import styled from 'styled-components/native';
+import {SafeAreaView, Text, TextInput, LogBox} from 'react-native';
 import BottomNavigation from './src/navigation/BottomNavigation';
 
 const App = () => {

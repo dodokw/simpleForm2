@@ -5,6 +5,7 @@ import {
   AllscreenList,
   ThirdBottomStackProps,
 } from '../../navigation/NavigationProps';
+import {CustomText} from '../../tools/CustomText';
 
 const ThirdIndex = ({}: ThirdBottomStackProps<AllscreenList.ThirdIndex>) => {
   return (
@@ -19,12 +20,6 @@ const Container = styled.View`
   background-color: #fff;
   align-items: center;
   justify-content: center;
-`;
-
-const CustomText = styled.Text`
-  font-size: 20px;
-  font-weight: bold;
-  color: #000;
 `;
 
 export default ThirdIndex;
