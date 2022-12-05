@@ -1,6 +1,7 @@
 import React from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
+//USER_DATA is example
 export enum StorageKey {
   USER_DATA = 'user_data',
 }
