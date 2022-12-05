@@ -3,7 +3,7 @@ import {View, Animated, Image, Dimensions} from 'react-native';
 import styled from 'styled-components/native';
 
 //Carousel
-// 참고용 -> import Carousel, {Pagination} from 'react-native-snap-carousel';
+// 참고용(라이브러리) -> import Carousel, {Pagination} from 'react-native-snap-carousel';
 
 const Carousel = () => {
   const imageData = [
