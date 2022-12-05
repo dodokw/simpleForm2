@@ -15,7 +15,7 @@ export const OpenEyeIcon = (IconProps: IconProps) => {
     <OpenEye
       width={IconProps.width}
       height={IconProps.height}
-      color={Color.green}
+      color={IconProps.color || Color.black}
       style={IconProps.style}
     />
   );

@@ -22,5 +22,5 @@ type CustomTextProps = {
 export const CustomText = styled.Text<CustomTextProps>`
   font-size: ${props => props.size || 20}px;
   color: ${props => props.color || '#000'};
-  font-family: ${props => props.fontName || 'Roboto'};
+  font-family: ${props => props.fontName || 'Georgia'};
 `;
