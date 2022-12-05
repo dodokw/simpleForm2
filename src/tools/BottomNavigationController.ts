@@ -2,7 +2,7 @@ import {NavigationProps} from '../navigation/NavigationProps';
 
 /**
  * @param {NavigationProps} navigation navigation props
- * @returns 리턴시 flex
+ * @returns 리턴시 display:flex
  * @description 페이지 이동시 네비게이션이 사라지고 첫스택으로 이동시 다시 나타납니다
  */
 export function hideAppearNav(navigation: any) {

@@ -6,9 +6,10 @@
  * @flow strict-local
  */
 
-import React from 'react';
+import React, {useEffect} from 'react';
 import {SafeAreaView, Text, TextInput, LogBox} from 'react-native';
 import BottomNavigation from './src/navigation/BottomNavigation';
+import {useAndroidBackHandler} from './src/tools/AndroidBackhandler';
 
 const App = () => {
   //텍스트 고정 시작
@@ -30,6 +31,13 @@ const App = () => {
     TextInput as unknown as TextInputWithDefaultProps
   ).defaultProps!.allowFontScaling = false;
   //텍스트 고정 끝
+
+  //백핸들러컨트롤 시작
+  // const backHandler = useAndroidBackHandler();
+  // backHandler.addPressBackListener(() => {
+  //   console.log('뒤로가기버튼이 눌렸습니다.');
+  // });
+  //백핸들러컨트롤 끝
 
   LogBox.ignoreLogs(['Expected style']);
 
