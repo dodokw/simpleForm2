@@ -8,6 +8,7 @@ import {
   BackHandler,
 } from 'react-native';
 import styled from 'styled-components/native';
+import Carousel from '../../components/firstBottom/firstIndex/Carousel';
 import {
   AllscreenList,
   FirstBottomStackProps,
@@ -40,12 +41,12 @@ const FirstIndex = ({}: FirstBottomStackProps<AllscreenList.FirstIndex>) => {
       'hardwareBackPress',
       backAction,
     );
-
     return () => backHandler.remove();
   }, [exitApp]);
 
   return (
     <Container>
+      <Carousel />
       <CustomText fontName="NanumSquareB">fistBottom</CustomText>
       <OpenEyeIcon width={wp(80)} height={hp(80)} color={Color.green} />
     </Container>
