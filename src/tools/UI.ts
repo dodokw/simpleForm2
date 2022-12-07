@@ -5,8 +5,8 @@ export const screenHeight = Dimensions.get('window').height;
 
 // XD파일 스크린의 세로,가로(임시)
 export const basicDimensions = {
-  height: 812,
-  width: 375,
+  height: 740,
+  width: 360,
 };
 
 // 디바이스의 세로,가로 비율

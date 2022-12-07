@@ -6,12 +6,23 @@
  * @flow strict-local
  */
 
+import {configureStore} from '@reduxjs/toolkit';
 import React, {useEffect} from 'react';
-import {SafeAreaView, Text, TextInput, LogBox} from 'react-native';
+import {SafeAreaView, Text, TextInput, LogBox, View} from 'react-native';
+import {Provider} from 'react-redux';
+import RootReducer from './src/module';
 import BottomNavigation from './src/navigation/BottomNavigation';
+import Route from './src/screen/Route';
 import {useAndroidBackHandler} from './src/tools/AndroidBackhandler';
 
 const App = () => {
+  //store 생성
+  const store = configureStore({
+    reducer: RootReducer,
+    middleware: [],
+  });
+  //store 생성 끝
+
   //텍스트 고정 시작
   interface TextWithDefaultProps extends Text {
     defaultProps?: {allowFontScaling?: boolean};
@@ -42,9 +53,11 @@ const App = () => {
   LogBox.ignoreLogs(['Expected style']);
 
   return (
-    <SafeAreaView style={{flex: 1}}>
-      <BottomNavigation />
-    </SafeAreaView>
+    <Provider store={store}>
+      <SafeAreaView style={{flex: 1}}>
+        <Route />
+      </SafeAreaView>
+    </Provider>
   );
 };
 

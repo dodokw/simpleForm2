@@ -9,6 +9,9 @@ export type NavigationProps = {
 };
 
 export enum AllscreenList {
+  //로그인 페이지 이름 리스트
+  Login = 'Login',
+
   //첫번쨰 바텀스택 페이지 이름 리스트
   FirstIndex = 'FirstIndex',
 
@@ -36,6 +39,10 @@ export type RootStackParamList = {
 };
 
 //page마다 props정리
+export type LoginParamList = {
+  [AllscreenList.Login]: {};
+};
+
 export type FirstBottomParamList = {
   [AllscreenList.FirstIndex]: {};
 };
@@ -52,6 +59,8 @@ export type FourthBottomParamList = {
   [AllscreenList.FourthIndex]: {};
 };
 
+export type LoginStackProps<T extends keyof LoginParamList> = NavigationProps &
+  LoginParamList[T];
 export type FirstBottomStackProps<T extends keyof FirstBottomParamList> =
   NavigationProps & FirstBottomParamList[T];
 export type SecondBottomStackProps<T extends keyof SecondBottomParamList> =
